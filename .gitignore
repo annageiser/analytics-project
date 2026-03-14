@@ -1,0 +1,39 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+env/
+venv/
+*.env
+*.ipynb_checkpoints
+
+# Data files
+*.csv
+*.tsv
+*.parquet
+*.xlsx
+*.xls
+*.json
+*.h5
+*.db
+*.sqlite
+
+# Logs
+*.log
+
+# Output folders
+output/
+results/
+reports/
+figures/
+plots/
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# IDE / Editor
+.vscode/
+.idea/
+*.swp
