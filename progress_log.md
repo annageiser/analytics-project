@@ -68,16 +68,36 @@ dtype: int64
 
 Orange3 and Jupyter produce the same row count, same column count, and the same validation numbers.
 
-## Step 1 - Audit Artifacts (Implemented in Jupyter)
-Date: 2026-04-04
+## Step 1 - Validation Hardening and Naming Cleanup
+Date: 2026-04-10
 
-Added strict and auditable Step 1 outputs in main.ipynb:
-- Exact mutual exclusivity check: click+basket+order must equal 1.
-- Exported baseline dataset: data/processed/step1_merged_baseline.csv
-- Exported missing-value report: data/processed/step1_missing_values.csv
-- Exported summary report: data/processed/step1_validation_summary.json
+Refined the Step 1 notebook workflow for clearer validation, reproducibility, and future train/validation split readiness.
 
-Validation results remain aligned with Step 1 log values:
-- Row count: 2756003
-- Column count: 21
-- Mutual exclusivity (exactly one action): True
+### Completed
+- Renamed core tables for clarity:
+  - train_raw_df
+  - items_raw_df
+- Added PID integrity checks before merge:
+  - Null PID check in train and items
+  - Duplicate PID check in items
+- Kept merge safety net with validate="m:1".
+- Improved artifact persistence:
+  - Missing-value CSV now stores only non-zero missing columns
+  - Stable empty-schema fallback for missing report
+  - Added FORCE_REFRESH_BASELINE flag for controlled baseline rewrites
+- Added generated_at_utc timestamp to summary payload.
+- Fixed exploratory reporting cell to use renamed dataframe variables consistently.
+
+### Current Step 1 Outputs
+- data/processed/step1_merged_baseline.csv
+- data/processed/step1_missing_values.csv
+- data/processed/step1_validation_summary.json
+
+### Notes
+- Summary payload is now the main machine-readable audit record for Step 1.
+- If progress_log is not updated frequently, the JSON summary should remain mandatory for traceability.
+
+### Next Actions
+1. Re-run the Step 1 validation cell and confirm parity outputs.
+2. Start Section 4 Data Preparation with split-safe naming:
+   - X_train, X_valid, y_train, y_valid
