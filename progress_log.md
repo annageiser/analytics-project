@@ -9,25 +9,33 @@ Track planning decisions, implementation progress, and next steps so all team me
 - Use this file as the shared planning/progress log.
 
 ## Status
-- Date: 2026-04-04
-- Current phase: Step-by-step restart implementation
+- Date: 2026-05-01
+- Current phase: Project Documentation
 - Owner: Copilot + project team
 
 ## Completed
+- **Project Setup and Initialization**: Established the project structure, including data and context directories, and set up the initial `requirements.txt`.
+- **Data Ingestion and Merging**: Loaded the `items.csv` and `train.csv` datasets, and merged them into a single baseline dataset (`step1_merged_baseline.csv`) for analysis.
+- **Initial Data Validation**: Performed initial data quality checks, including row and column counts, identifying missing values, and verifying the mutual exclusivity of the `click`, `basket`, and `order` columns.
+- **Workflow Hardening**: Improved the data processing workflow by adding PID integrity checks, standardizing table names, and creating a machine-readable validation summary (`step1_validation_summary.json`).
 - Added a reproducible quick start section to README.
 - Pinned Python dependency versions in requirements.txt.
 - Updated .gitignore to keep key sample assets/notebooks trackable.
 - Fixed path portability and trailing invalid code content in analytics_project_jupyter_draft.ipynb.
 
 ## In Progress
-- Single-step execution only.
+- Exploratory Data Analysis (EDA) to understand data distributions and relationships.
 
 ## Next Actions
-1. Step 2 only: Data Understanding (Section 3.2) with identical Orange3 and Jupyter outputs, then log exact parity metrics.
+1.  **Feature Engineering**: Create new attributes from existing data to improve model performance.
+2.  **Model Selection and Training**: Implement and compare at least three different classification algorithms.
+3.  **Model Evaluation**: Evaluate the models based on appropriate metrics and select the best-performing one.
+4.  **Reporting**: Summarize the findings in a paper and presentation.
 
 ## Notes For Team
-- exploratory_data:analysis.ipynb remains the strongest EDA reference.
-- Keep modeling changes reproducible with relative paths only.
+- The `exploratory_data:analysis.ipynb` notebook is the primary reference for EDA.
+- All modeling changes should use relative paths to ensure reproducibility.
+- The `step1_validation_summary.json` file is the main audit record for the initial data processing step.
 
 ## Step 1 - Data Description
 Date: 2026-04-03

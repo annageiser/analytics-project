@@ -29,6 +29,7 @@ results/
 reports/
 figures/
 plots/
+processed/
 
 # Jupyter
 .ipynb_checkpoints/
@@ -45,3 +46,6 @@ plots/
 .vscode/
 .idea/
 *.swp
+
+.DS_Store
+data/raw/train.csv
