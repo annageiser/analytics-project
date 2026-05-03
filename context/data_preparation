@@ -1,0 +1,45 @@
+What is a predictive model?
+A black box to predict the future based on informations from the past and the present
+
+Development and use of predictive models
+
+
+Quality aspects of a Data Mining Analyse
+ The success of a data mining method depends on the relevance, reliability and validity of the variables (data quality)
+ The validity (generalizability) of the results depends on whether the specialist department contributes hypotheses about attributes and relationships of the data population
+ If only a selection of the data population is available as data elements (partial survey), the analyst must ask how reliably he can generalise the results of the sample
+ A distinction is made between the learning set and the test set if a second set of data (the test set) is to validate the result of the learning set.
+
+
+Scaling of Features
+                  
+ nominal:
+ ordinal:
+ interval:
+ proportional:
+only frequencies + order
++ distances
++ zero point
+Scale levels in comparison.
+Red: The properties newly added at
+the respective scale level.
+
+
+Data preprocessing consists of five tasks
+1. Reduce data objects («sampling»)
+2. Reduce features («feature selection» or «dimensionality reduction»)
+3. Treat defective and missing features
+4. Normalize features
+5. Adjust scaling
+
+
+
+Reducing the Size (Sampling)
+Why sampling?
+- Counteract performance problems.
+- Some methods are not applicable to too many records.
+Requirement: the sample should reflect the context of the raw data
+- i.e., it should not be biased.
+Sampling methods:
+- Differentselectionproceduresareavailable
+- Mostly:randomselectionofdataobjects
