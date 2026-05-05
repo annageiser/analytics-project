@@ -48,4 +48,5 @@ processed/
 *.swp
 
 .DS_Store
+**/.DS_Store
 data/raw/train.csv
