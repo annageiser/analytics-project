@@ -75,8 +75,8 @@ df_sample = df.iloc[:int(len(df) * 0.1)]
 
 
 # Create a new column 'priceRatio'
-df_sample['priceRatio'] = (df_sample['price'] / df_sample['competitorPrice'].replace(0, np.nan)).fillna(1.0)
-df_sample['priceRatio'] = df_sample['priceRatio'].astype(float) # Convert the column to a float data type for cleanliness
+df['priceRatio'] = df['price'] / df['rrp'].replace(0, np.nan)
+df['priceRatio'] = df['priceRatio'].fillna(1.0)
 
 # Create a new column 'unitsBought'
 df_sample['unitsBought'] = (df_sample['revenue'] / df_sample['price']).round().fillna(0) # We fill any potential NaN values (e.g., from 0/0) with 0 and handle division by zero
@@ -193,9 +193,7 @@ X_fold_val.drop(columns=to_drop, inplace=True)
 drop_cols = [
     'click',
     'basket',
-    'price',
     'revenue',
-    'rrp',
     'lineID',
     'unitsBought',
     'day'
