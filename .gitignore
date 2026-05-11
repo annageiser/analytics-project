@@ -10,7 +10,6 @@ venv/
 *.ipynb_checkpoints
 
 # Data files
-*.csv
 *.tsv
 *.parquet
 *.xlsx
@@ -24,12 +23,7 @@ venv/
 *.log
 
 # Output folders
-output/
-results/
-reports/
-figures/
-plots/
-processed/
+
 
 # Jupyter
 .ipynb_checkpoints/
@@ -50,3 +44,4 @@ processed/
 .DS_Store
 **/.DS_Store
 data/raw/train.csv
+data/raw/items.csv
