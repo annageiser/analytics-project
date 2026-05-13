@@ -45,3 +45,7 @@ venv/
 **/.DS_Store
 data/raw/train.csv
 data/raw/items.csv
+
+# Output folders
+data/processed/
+reports/figures/
