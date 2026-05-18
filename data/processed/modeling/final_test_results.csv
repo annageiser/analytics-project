@@ -1,5 +1,0 @@
-model,weights,test_auc,test_f1,best_params,cv_auc
-Ensemble,"(np.float64(0.05), np.float64(0.2), np.float64(0.75))",0.6215570572890056,0.39091293131380245,,
-DecisionTree,,0.6122753748080495,0.38419102977632363,"{'min_samples_leaf': 100, 'max_depth': 12}",0.6801002679813843
-RandomForest,,0.6238712367235866,0.3915858073161444,"{'n_estimators': 150, 'min_samples_leaf': 20, 'max_features': 0.8, 'max_depth': 12}",0.6991906062360507
-XGBoost,,0.6181407473310734,0.3896682182193185,"{'subsample': 0.9, 'reg_lambda': 5.0, 'reg_alpha': 0.1, 'n_estimators': 1000, 'min_child_weight': 5, 'max_depth': 10, 'max_delta_step': 3, 'learning_rate': 0.02, 'colsample_bytree': 0.8, 'colsample_bylevel': 0.8}",0.7071322538325748
